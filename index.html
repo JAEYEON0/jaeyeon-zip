@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAE-YEON.zip | HOME</title>
     <style>
-        /* 1. 독립 사이트와 통일된 화이트 미니멀 배경 */
+        /* 1. 전체 배경: 화이트 미니멀 */
         body {
             margin: 0;
             padding: 0;
@@ -17,7 +17,7 @@
             align-items: center;
         }
 
-        /* 2. 세련된 상단 메뉴바 */
+        /* 2. 상단 메뉴바 */
         nav {
             width: 100%;
             max-width: 900px;
@@ -37,10 +37,10 @@
         }
 
         nav a:hover {
-            color: #a78bfa; /* 보라색 포인트 */
+            color: #a78bfa;
         }
 
-        /* 3. 레이아웃 구조 (2단 그리드) */
+        /* 3. 레이아웃 구조 */
         .main-container {
             width: 90%;
             max-width: 1000px;
@@ -49,7 +49,7 @@
             gap: 30px;
         }
 
-        /* 4. 카드 디자인: 독립 사이트의 그 고급스러운 느낌 */
+        /* 4. 카드 디자인 */
         .card {
             background: #fff;
             border: 1px solid #f2f2f2;
@@ -76,7 +76,7 @@
             gap: 20px;
         }
 
-        /* 유튜브 플레이어 비율 유지 박스 */
+        /* 유튜브 플레이어 비율 유지 */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; 
@@ -95,6 +95,14 @@
             border: 0;
         }
 
+        /* 방명록 위젯 박스 */
+        .guestbook-box {
+            width: 100%;
+            min-height: 300px; /* 방명록 높이에 맞춰 조절 가능 */
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
         footer {
             margin: 100px 0 50px 0;
             font-size: 11px;
@@ -102,7 +110,6 @@
             letter-spacing: 3px;
         }
 
-        /* 모바일 대응 */
         @media (max-width: 850px) {
             .main-container { grid-template-columns: 1fr; }
         }
@@ -118,34 +125,3 @@
     </nav>
 
     <div class="main-container">
-        <aside class="card">
-            <img src="profile.jpg" alt="Profile" class="profile-img">
-            <div class="status-text">
-                <strong style="font-size: 20px; color: #222;">JAE-YEON</strong><br>
-                WELCOME TO MY ARCHIVE 👾<br><br>
-                <span style="color: #a78bfa;">●</span> Status: Coding<br>
-                <span style="color: #ffb6c1;">●</span> Mood: Cozy
-            </div>
-        </aside>
-
-        <main class="content-stack">
-            <div class="card">
-                <p style="margin-top:0; font-size:11px; color:#ccc; margin-bottom:15px; letter-spacing: 1px;">NOW PLAYING</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/8rMARLBfd3U" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="card">
-                <p style="margin-top:0; font-size:11px; color:#ccc; margin-bottom:15px; letter-spacing: 1px;">GUESTBOOK</p>
-                <div style="min-height: 200px; background: #fafafa; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #ddd; font-size: 12px;">
-                    여기에 방명록 위젯 코드를 넣으면 나타납니다!
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <footer>© JAE-YEON.zip</footer>
-
-</body>
-</html>
