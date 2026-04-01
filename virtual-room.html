@@ -3,119 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAE-YEON.zip | Virtual Room</title>
-    <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>JAE-YEON.zip | ROOM</title>
     <style>
-        /* 메뉴 링크 스타일 */
-        .nav-bar a { text-decoration: none; color: inherit; display: inline-block; transition: 0.2s; }
-        .nav-bar a:hover { transform: scale(1.1); color: #a78bfa; }
+        body {
+            margin: 0; padding: 0;
+            background-color: #ffffff; /* 거실과 통일된 화이트 */
+            font-family: 'Pretendard', sans-serif;
+            color: #333;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        nav {
+            width: 100%; max-width: 900px;
+            padding: 60px 0 40px 0;
+            display: flex; justify-content: center; gap: 40px;
+        }
+        nav a {
+            text-decoration: none; color: #ccc;
+            font-size: 13px; font-weight: 600; letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #ffb6c1; /* 룸은 핑크색 포인트! */ }
         
-        /* 버추얼 룸 레이아웃 */
-        .room-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr; /* 방 전경과 소품 섹션 구분 */
-            gap: 20px;
+        .main-container {
+            width: 90%; max-width: 1000px;
+            display: grid; grid-template-columns: 320px 1fr; gap: 30px;
+        }
+        .card {
+            background: #fff; border: 1px solid #f2f2f2;
+            border-radius: 24px; padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+        }
+        .profile-img { width: 100%; border-radius: 18px; margin-bottom: 20px; }
+        .status-text { font-size: 14px; line-height: 1.8; color: #555; }
+        
+        /* 룸 이미지 스타일 */
+        .room-image-container {
+            width: 100%; border-radius: 15px; overflow: hidden;
+        }
+        .room-image-container img {
+            width: 100%; height: auto; display: block;
         }
 
-        /* 메인 방 이미지 영역 */
-        .room-display {
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-        .room-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        /* 소품 섹션 스타일 */
-        .deco-section {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .deco-item {
-            background: rgba(255, 209, 220, 0.5); /* 핑크 테마 */
-            border-radius: 15px;
-            padding: 15px;
-            text-align: left;
-        }
-        .deco-item h4 { margin: 0 0 10px 0; color: #db2777; }
-        .deco-item p { margin: 0; font-size: 0.9em; }
-
-        .status-list { list-style: none; padding: 0; }
-        .status-list li { margin-bottom: 5px; font-size: 0.95em; }
-
-        @media (max-width: 768px) {
-            .room-layout { grid-template-columns: 1fr; }
-        }
+        footer { margin: 100px 0 50px 0; font-size: 11px; color: #eee; letter-spacing: 3px; }
+        
+        @media (max-width: 850px) { .main-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="virtual-room.html" style="color: #ffb6c1;">ROOM</a>
+        <a href="test.html">NEW SPACE</a>
+        <a href="#">SHOP</a>
+    </nav>
+
     <div class="main-container">
-        <header class="header">
-            <div class="logo-wrapper">
-                <span class="cat-ear">Ꮚ</span>
-                <div class="logo">Virtual Room</div>
-                <span class="cat-ear">Ꮚ</span>
+        <aside class="card">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="status-text">
+                <strong style="font-size: 20px; color: #222;">MY ROOM</strong><br>
+                COZY & SWEET SPACE 🧸<br><br>
+                <span style="color: #ffb6c1;">●</span> Status: Resting<br>
+                <span style="color: #ffb6c1;">●</span> Mood: Pinkish
             </div>
-            <nav class="nav-bar">
-                <a href="index.html"><span>home</span></a>
-                <a href="virtual-room.html"><span style="color: #a78bfa;">virtual room</span></a>
-                <span>portfolio</span>
-                <span>shop</span>
-            </nav>
-        </header>
+        </aside>
 
-        <main class="content-wrapper" style="display: block;">
-            <div class="room-layout">
-                <div class="room-display glass-card">
-                    <h3>🏠 나의 핑크빛 방 전경</h3>
-                    <p style="margin-bottom: 20px;">이런 느낌으로 내 공간을 채워나가고 싶어! (◡‿◡✿)</p>
-                    
-                    <img src="room.jpg" alt="my virtual room" class="room-img">
-                </div>
-
-                <div class="deco-section">
-                    <div class="deco-item glass-card">
-                        <h4>🎁 침대 위 친구들</h4>
-                        <ul class="status-list" style="margin: 0; padding-left: 15px; text-align: left;">
-                            <li>🐱 헬로키티 쿠션</li>
-                            <li>🐻 리락쿠마 인형</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="deco-item glass-card">
-                        <h4>🎀 특별 소품</h4>
-                        <ul class="status-list" style="margin: 0; padding-left: 15px; text-align: left;">
-                            <li>🐰 마이멜로디 가방</li>
-                            <li>💖 헬로키티 러그</li>
-                            <li>🌸 핑크색 가구</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="deco-item glass-card">
-                        <h4>✨ 오늘의 기분</h4>
-                        <p style="text-align: left;">이 방에 있는 것만으로도 행복해지는 느낌이야! (◡‿◡✿)</p>
-                    </div>
-                </div>
+        <main class="card">
+            <p style="margin-top:0; font-size:11px; color:#ccc; margin-bottom:15px; letter-spacing: 1px;">VIRTUAL ROOM VIEW</p>
+            <div class="room-image-container">
+                <img src="room_rpt.jpg" alt="Virtual Room">
             </div>
         </main>
     </div>
 
-    <script>
-        document.addEventListener('mousemove', function(e) {
-            const star = document.createElement('div');
-            star.className = 'mouse-particle';
-            star.style.left = e.pageX + 'px';
-            star.style.top = e.pageY + 'px';
-            document.body.appendChild(star);
-            setTimeout(() => { star.remove(); }, 800);
-        });
-    </script>
+    <footer>© JAE-YEON.zip</footer>
 </body>
 </html>
