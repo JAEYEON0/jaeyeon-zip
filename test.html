@@ -5,39 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAE-YEON.zip | NEW SPACE</title>
     <style>
-        /* 기본 레이아웃 설정 */
+        /* 🖱️ 마우스 커서 설정 */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
-            background-color: #ffffff; /* 깨끗한 화이트 배경 */
+            background-color: #ffffff;
             display: flex;
-            flex-direction: column; /* 세로 정렬 */
+            flex-direction: column;
             align-items: center;
+            /* 기본 커서를 업로드하신 이미지로 변경 */
+            cursor: url('cursor.gif') 16 16, auto;
+        }
+
+        /* 🔗 링크에 마우스 올렸을 때도 커서 유지 */
+        .home-link {
+            cursor: url('cursor.gif') 16 16, pointer !important;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px; /* 너무 퍼지지 않게 고정 */
+            max-width: 1200px;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* 이미지 스타일 */
         img {
             width: 100%;
             height: auto;
             display: block;
             border-radius: 0px; 
-            margin-bottom: 40px; /* 버튼과의 간격 */
+            margin-bottom: 40px;
         }
 
-        /* 🏠 홈으로 돌아가는 버튼 스타일 */
         .home-link {
             text-decoration: none;
-            color: #ccc; /* 은은한 회색 */
+            color: #ccc;
             font-size: 13px;
             font-family: 'Pretendard', sans-serif;
             font-weight: 600;
@@ -49,11 +54,10 @@
         }
 
         .home-link:hover {
-            color: #a78bfa; /* 거실 포인트 컬러인 연보라색 */
+            color: #a78bfa;
             border-bottom: 1px solid #a78bfa;
         }
 
-        /* 하단 카피라이트 */
         .footer-text {
             font-size: 11px;
             color: #eee;
