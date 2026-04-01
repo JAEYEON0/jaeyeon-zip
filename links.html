@@ -1,163 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>JAE-YEON.zip | LINKS</title>
-
     <style>
-
+        /* 🖱️ 마우스 커서 설정 */
         body { 
-
             margin: 0; padding: 0; 
-
             background-color: #ffffff; 
-
             font-family: 'Pretendard', sans-serif; 
-
             display: flex; flex-direction: column; align-items: center; 
-
             min-height: 100vh; 
+            /* 기본 커서를 업로드하신 이미지로 변경 */
+            cursor: url('cursor.gif') 16 16, auto;
+        }
 
+        /* 🔗 링크와 버튼에 마우스 올렸을 때도 커서 유지 */
+        nav a, .link-card { 
+            cursor: url('cursor.gif') 16 16, pointer !important; 
         }
 
         nav { 
-
             width: 100%; max-width: 900px; 
-
             padding: 60px 0 40px 0; 
-
             display: flex; justify-content: center; gap: 40px; 
-
         }
-
         nav a { 
-
             text-decoration: none; color: #ccc; 
-
             font-size: 13px; font-weight: 600; letter-spacing: 1px; 
-
             transition: 0.3s; 
-
         }
-
         nav a:hover { color: #a78bfa; }
 
-
-
         .link-container { 
-
             width: 90%; max-width: 500px; 
-
             margin-top: 20px; text-align: center; 
-
         }
-
         .profile-small { 
-
             width: 80px; height: 80px; 
-
             border-radius: 50%; margin-bottom: 20px; 
-
             border: 1px solid #f2f2f2; 
-
         }
-
         .title { 
-
             font-size: 20px; font-weight: 700; 
-
             color: #222; margin-bottom: 30px; 
-
         }
-
-
 
         .link-card {
-
             display: block; background: #fff; 
-
             border: 1px solid #f2f2f2;
-
             border-radius: 16px; padding: 18px; 
-
             margin-bottom: 15px;
-
             text-decoration: none; color: #555; 
-
             font-size: 14px; font-weight: 500;
-
             transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-
         }
-
         .link-card:hover { 
-
             transform: translateY(-3px); 
-
             border-color: #a78bfa; color: #a78bfa; 
-
             box-shadow: 0 8px 25px rgba(167, 139, 250, 0.1); 
-
         }
-
-
 
         footer { 
-
             margin-top: auto; padding: 50px 0; 
-
             font-size: 11px; color: #eee; letter-spacing: 3px; 
-
         }
-
     </style>
-
 </head>
-
 <body>
-
     <nav>
-
         <a href="index.html">HOME</a>
-
         <a href="virtual-room.html">ROOM</a>
-
         <a href="test.html">NEW SPACE</a>
-
         <a href="links.html" style="color: #a78bfa;">LINK</a>
-
     </nav>
 
-
-
     <div class="link-container">
-
         <img src="profile.jpg" alt="Profile" class="profile-small">
-
         <div class="title">JAE-YEON'S LINKS</div>
 
-
-
-        <a href="https://twitter.com/@2nmuy4
-
-" class="link-card" target="_blank">TWITTER</a>
-
+        <a href="https://twitter.com/@2nmuy4" class="link-card" target="_blank">TWITTER</a>
         
-
         <a href="https://curious.quizby.me/dyuyaji" class="link-card" target="_blank">QURIOUS</a>
-
     </div>
 
-
-
     <footer>© JAE-YEON.zip</footer>
-
 </body>
-
 </html>
