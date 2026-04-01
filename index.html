@@ -6,6 +6,10 @@
     <title>JAE-YEON.zip</title>
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-bar a { text-decoration: none; color: inherit; display: inline-block; transition: 0.2s; }
+        .nav-bar a:hover { transform: scale(1.1); color: #a78bfa; }
+    </style>
 </head>
 <body>
     <div class="main-container">
@@ -13,22 +17,19 @@
             <div class="spotify-player">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-
             <div class="logo-wrapper">
                 <span class="cat-ear">Ꮚ</span>
                 <div class="logo">JAE-YEON.zip</div>
                 <span class="cat-ear">Ꮚ</span>
             </div>
             <nav class="nav-bar">
-                <span>home</span>
-                <span>virtual room</span>
+                <a href="index.html"><span style="color: #a78bfa;">home</span></a>
+                <a href="virtual-room.html"><span>virtual room</span></a>
                 <span>portfolio</span>
                 <span>shop</span>
             </nav>
         </header>
-
         <div class="ticker">나의 작은 공간에 온 걸 환영해! ENJOY YOUR STAY ✩</div>
-
         <main class="content-wrapper">
             <section class="profile-side">
                 <div class="profile-box">
@@ -44,24 +45,28 @@
                     </div>
                 </div>
             </section>
-
             <section class="main-side">
                 <div class="glass-card">
                     <h3>♥ welcome</h3>
                     <p>나의 작은 공간에 온 걸 환영해! 여기는 내가 좋아하는 것들을 기록하는 곳이야! ( ◡‿◡ *)</p>
                 </div>
-                
-                <div class="glass-card guestbook">
+                <div class="glass-card">
                     <h3>💬 guestbook</h3>
-                    <div class="input-group">
-                        <input type="text" id="gb-name" placeholder="이름..">
-                        <textarea id="gb-msg" placeholder="방명록 남기기"></textarea>
-                        <button class="post-btn" onclick="addMessage()">post! ♡</button>
-                    </div>
-                    <div id="gb-list" class="gb-list"></div>
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = "https://jaeyeon0.github.io/jaeyeon-zip/"; 
+                            this.page.identifier = "jaeyeon-zip-main"; 
+                        };
+                        (function() { 
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://jaeyeon-zip.disqus.com/embed.js'; 
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
                 </div>
             </section>
-
             <section class="update-side">
                 <div class="miku-area">
                     <div class="miku-balloon">hi! (◡‿◡✿)</div>
@@ -70,9 +75,7 @@
             </section>
         </main>
     </div>
-
     <script>
-        // 1. 마우스 반짝이 효과
         document.addEventListener('mousemove', function(e) {
             const star = document.createElement('div');
             star.className = 'mouse-particle';
@@ -81,35 +84,6 @@
             document.body.appendChild(star);
             setTimeout(() => { star.remove(); }, 800);
         });
-
-        // 2. 방명록 기능
-        window.onload = function() { displayMessages(); };
-
-        function addMessage() {
-            const name = document.getElementById('gb-name').value;
-            const msg = document.getElementById('gb-msg').value;
-            if (name === "" || msg === "") { alert("내용을 입력해줘! Ꮚ◡‿◡Ꮚ"); return; }
-
-            const newMessage = { name, msg, date: new Date().toLocaleString() };
-            let messages = JSON.parse(localStorage.getItem('guestbook')) || [];
-            messages.unshift(newMessage);
-            localStorage.setItem('guestbook', JSON.stringify(messages));
-
-            document.getElementById('gb-name').value = "";
-            document.getElementById('gb-msg').value = "";
-            displayMessages();
-        }
-
-        function displayMessages() {
-            const listDiv = document.getElementById('gb-list');
-            const messages = JSON.parse(localStorage.getItem('guestbook')) || [];
-            listDiv.innerHTML = messages.map(m => `
-                <div class="gb-item">
-                    <div class="gb-item-header"><strong>${m.name}</strong> <span>${m.date}</span></div>
-                    <div class="gb-item-content">${m.msg}</div>
-                </div>
-            `).join('');
-        }
     </script>
 </body>
 </html>

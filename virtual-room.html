@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAE-YEON.zip | Virtual Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-bar a { text-decoration: none; color: inherit; display: inline-block; transition: 0.2s; }
+        .nav-bar a:hover { transform: scale(1.1); color: #a78bfa; }
+        .room-display { min-height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="logo-wrapper">
+                <span class="cat-ear">Ꮚ</span>
+                <div class="logo">Virtual Room</div>
+                <span class="cat-ear">Ꮚ</span>
+            </div>
+            <nav class="nav-bar">
+                <a href="index.html"><span>home</span></a>
+                <a href="virtual-room.html"><span style="color: #a78bfa;">virtual room</span></a>
+                <span>portfolio</span>
+                <span>shop</span>
+            </nav>
+        </header>
+        <main class="content-wrapper" style="display: block;">
+            <div class="glass-card room-display">
+                <h3>🏠 나의 가상 방</h3>
+                <p>여기는 꾸며나갈 예정인 나의 방이야! (◡‿◡✿)</p>
+                <img src="new-photo.gif" alt="room-deco" style="max-width: 200px; margin-top: 20px; border-radius: 15px;">
+                <p style="margin-top: 20px; font-size: 0.9em; color: #666;">[ 가구들을 배치해볼까? ]</p>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const star = document.createElement('div');
+            star.className = 'mouse-particle';
+            star.style.left = e.pageX + 'px';
+            star.style.top = e.pageY + 'px';
+            document.body.appendChild(star);
+            setTimeout(() => { star.remove(); }, 800);
+        });
+    </script>
+</body>
+</html>
