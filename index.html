@@ -6,102 +6,48 @@
     <title>JAE-YEON.zip | HOME</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
+            margin: 0; padding: 0;
+            background-color: #ffffff; /* 독립 사이트와 통일된 화이트 */
             font-family: 'Pretendard', sans-serif;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: flex; flex-direction: column; align-items: center;
         }
-
         nav {
-            width: 100%;
-            max-width: 900px;
+            width: 100%; max-width: 900px;
             padding: 60px 0 40px 0;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+            display: flex; justify-content: center; gap: 40px;
         }
-
         nav a {
-            text-decoration: none;
-            color: #ccc;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            text-decoration: none; color: #ccc;
+            font-size: 13px; font-weight: 600; letter-spacing: 1px;
             transition: 0.3s;
         }
-
         nav a:hover { color: #a78bfa; }
-
         .main-container {
-            width: 90%;
-            max-width: 1000px;
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 30px;
+            width: 90%; max-width: 1000px;
+            display: grid; grid-template-columns: 320px 1fr; gap: 30px;
         }
-
         .card {
-            background: #fff;
-            border: 1px solid #f2f2f2;
-            border-radius: 24px;
-            padding: 30px;
+            background: #fff; border: 1px solid #f2f2f2;
+            border-radius: 24px; padding: 30px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.02);
         }
-
-        .profile-img {
-            width: 100%;
-            border-radius: 18px;
-            margin-bottom: 20px;
-        }
-
-        .status-text {
-            font-size: 14px;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .content-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
+        .profile-img { width: 100%; border-radius: 18px; margin-bottom: 20px; }
+        .status-text { font-size: 14px; line-height: 1.8; color: #555; }
+        .content-stack { display: flex; flex-direction: column; gap: 20px; }
+        /* 유튜브 비율 및 오류 방지 */
         .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            background: #f9f9f9;
+            position: relative; padding-bottom: 56.25%; height: 0;
+            overflow: hidden; border-radius: 15px; background: #000;
         }
-
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
-
-        footer {
-            margin: 100px 0 50px 0;
-            font-size: 11px;
-            color: #eee;
-            letter-spacing: 3px;
-        }
-
-        @media (max-width: 850px) {
-            .main-container { grid-template-columns: 1fr; }
-        }
+        footer { margin: 100px 0 50px 0; font-size: 11px; color: #eee; letter-spacing: 3px; }
+        @media (max-width: 850px) { .main-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html">HOME</a>
         <a href="virtual-room.html">ROOM</a>
@@ -124,7 +70,7 @@
             <div class="card">
                 <p style="margin-top:0; font-size:11px; color:#ccc; margin-bottom:15px; letter-spacing: 1px;">NOW PLAYING</p>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/8rMARLBfd3U" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/8rMARLBfd3U?si=GzFfJ2UvX0E5l-rM&origin=https://jaeyeon0.github.io" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -137,6 +83,5 @@
     </div>
 
     <footer>© JAE-YEON.zip</footer>
-
 </body>
 </html>
