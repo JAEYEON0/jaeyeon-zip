@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAE-YEON.zip | HOME</title>
     <style>
-        /* 1. 전체 배경: 화이트 미니멀 */
         body {
             margin: 0;
             padding: 0;
             background-color: #ffffff;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            font-family: 'Pretendard', sans-serif;
             color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* 2. 상단 메뉴바 */
         nav {
             width: 100%;
             max-width: 900px;
@@ -36,11 +34,8 @@
             transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #a78bfa;
-        }
+        nav a:hover { color: #a78bfa; }
 
-        /* 3. 레이아웃 구조 */
         .main-container {
             width: 90%;
             max-width: 1000px;
@@ -49,7 +44,6 @@
             gap: 30px;
         }
 
-        /* 4. 카드 디자인 */
         .card {
             background: #fff;
             border: 1px solid #f2f2f2;
@@ -76,7 +70,6 @@
             gap: 20px;
         }
 
-        /* 유튜브 플레이어 비율 유지 */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; 
@@ -93,14 +86,6 @@
             width: 100%;
             height: 100%;
             border: 0;
-        }
-
-        /* 방명록 위젯 박스 */
-        .guestbook-box {
-            width: 100%;
-            min-height: 300px; /* 방명록 높이에 맞춰 조절 가능 */
-            border-radius: 12px;
-            overflow: hidden;
         }
 
         footer {
@@ -125,3 +110,33 @@
     </nav>
 
     <div class="main-container">
+        <aside class="card">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="status-text">
+                <strong style="font-size: 20px; color: #222;">JAE-YEON</strong><br>
+                WELCOME TO MY ARCHIVE 👾<br><br>
+                <span style="color: #a78bfa;">●</span> Status: Coding<br>
+                <span style="color: #ffb6c1;">●</span> Mood: Cozy
+            </div>
+        </aside>
+
+        <main class="content-stack">
+            <div class="card">
+                <p style="margin-top:0; font-size:11px; color:#ccc; margin-bottom:15px; letter-spacing: 1px;">NOW PLAYING</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8rMARLBfd3U" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="card">
+                <p style="margin-top:0; font-size:11px; color:#ccc; margin-bottom:15px; letter-spacing: 1px;">GUESTBOOK</p>
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-7013867c-3f95-442a-a92c-f673859661f4" data-elfsight-app-lazy></div>
+            </div>
+        </main>
+    </div>
+
+    <footer>© JAE-YEON.zip</footer>
+
+</body>
+</html>
