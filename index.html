@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAE-YEON.zip | HOME</title>
     <style>
-        body { margin: 0; padding: 0; background-color: #ffffff; font-family: 'Pretendard', sans-serif; color: #333; display: flex; flex-direction: column; align-items: center; }
+        /* 🖱️ 마우스 커서 설정 */
+        body { 
+            margin: 0; padding: 0; 
+            background-color: #ffffff; 
+            font-family: 'Pretendard', sans-serif; 
+            color: #333; 
+            display: flex; flex-direction: column; align-items: center; 
+            /* 기본 커서를 올리신 이미지로 변경 (크기 자동 조절을 위해 32 32 추가) */
+            cursor: url('cursor.gif') 16 16, auto; 
+        }
+
+        /* 🔗 링크에 마우스 올렸을 때도 커서 유지 */
+        a, button, iframe { 
+            cursor: url('cursor.gif') 16 16, pointer !important; 
+        }
+
         nav { width: 100%; max-width: 900px; padding: 60px 0 40px 0; display: flex; justify-content: center; gap: 40px; }
         nav a { text-decoration: none; color: #ccc; font-size: 13px; font-weight: 600; letter-spacing: 1px; transition: 0.3s; }
         nav a:hover { color: #a78bfa; }
+        
         .main-container { width: 90%; max-width: 1000px; display: grid; grid-template-columns: 320px 1fr; gap: 30px; }
         .card { background: #fff; border: 1px solid #f2f2f2; border-radius: 24px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.02); }
         .profile-img { width: 100%; border-radius: 18px; margin-bottom: 20px; }
         .status-text { font-size: 14px; line-height: 1.8; color: #555; }
+        
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; background: #000; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
         footer { margin: 100px 0 50px 0; font-size: 11px; color: #eee; letter-spacing: 3px; }
+        
         @media (max-width: 850px) { .main-container { grid-template-columns: 1fr; } }
     </style>
 </head>
